@@ -15,4 +15,3 @@ def compare_scores
   end
   Team.output_rankings
 end
-compare_scores
