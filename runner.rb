@@ -1,5 +1,4 @@
 require 'pry'
-require_relative './teams.rb'
 require_relative './standings.rb'
 
 require 'pry'
