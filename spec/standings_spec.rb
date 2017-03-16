@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'pry'
 
 describe "CLI Runner" do
     sample_input =["Lions 3, Snakes 3

@@ -1,4 +1,3 @@
-require 'pry'
 require_relative './teams.rb'
 
 def compare_scores(file)

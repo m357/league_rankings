@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'pry'
+
 describe Team do
   before do
     @team = Team.create("Falcons")

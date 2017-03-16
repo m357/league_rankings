@@ -1,9 +1,4 @@
-require 'pry'
 require_relative './standings.rb'
-
-# require 'pry'
-# require_relative './teams.rb'
-# require_relative './standings.rb'
 
 def run_all()
   puts "League standings calculator"
