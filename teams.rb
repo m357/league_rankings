@@ -89,5 +89,4 @@ class Team
   def print_standing
     return "#{self.name}, #{self.total_points}"
   end
-
 end
