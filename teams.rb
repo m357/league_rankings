@@ -1,7 +1,5 @@
 class Team
   attr_accessor :name, :wins, :losses, :ties
-
-
   @@all_teams = []
 
   def initialize(name)
@@ -16,9 +14,9 @@ class Team
   end
 
   def self.create(name)
-      t = Team.new(name)
-      @@all_teams << t
-      return t
+    t = Team.new(name)
+    @@all_teams << t
+    return t
   end
 
   def self.find(name)
@@ -57,29 +55,29 @@ class Team
   end
 
   def self.read_game_score(score)
-      finalscore = score.split(',')
-      team1 = finalscore[0].strip
-      team2 = finalscore[1].strip
+    finalscore = score.split(',')
+    team1 = finalscore[0].strip
+    team2 = finalscore[1].strip
 
-      team1score = team1[/\d+/]
-      team2score = team2[/\d+/]
-      team1name = team1.gsub(/[0-9]/,"").strip
-      team2name = team2.gsub(/[0-9]/,"").strip
-      #splits line into each team and their result and finds assigns and points
+    team1score = team1[/\d+/]
+    team2score = team2[/\d+/]
+    team1name = team1.gsub(/[0-9]/,"").strip
+    team2name = team2.gsub(/[0-9]/,"").strip
+    #splits line into each team and their result and finds assigns and points
 
-      team1 = find_or_create(team1name)
-      team2 = find_or_create(team2name)
+    team1 = find_or_create(team1name)
+    team2 = find_or_create(team2name)
 
-      if team1score > team2score
-        team1.wins += 1
-        team2.losses += 1
-      elsif team1score < team2score
-        team2.wins += 1
-        team1.losses += 1
-      elsif team1score == team2score
-        team1.ties += 1
-        team2.ties += 1
-      end
+    if team1score > team2score
+      team1.wins += 1
+      team2.losses += 1
+    elsif team1score < team2score
+      team2.wins += 1
+      team1.losses += 1
+    elsif team1score == team2score
+      team1.ties += 1
+      team2.ties += 1
+    end
   end
 
 
