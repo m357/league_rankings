@@ -40,9 +40,10 @@ class Team
 
   def self.output_rankings
     league = Team.sort_all_by_score
+    alpha_sort = league.sort_by{ |t| t.name}
     last_num = 0
     last_index = 0
-    league.each_with_index do |t, index|
+    alpha_sort.each_with_index do |t, index|
       if t.total_points != last_num
         i = index +1
       else
